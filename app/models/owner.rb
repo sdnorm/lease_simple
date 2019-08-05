@@ -4,6 +4,9 @@ class Owner < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :confirmable, :trackable, :lockable
+         :trackable, :lockable
+        #  :confirmable, :trackable, :lockable
+
+  has_many :properties
 
 end
