@@ -24,8 +24,32 @@
         </div>
       </li>
     </ul>
-    <%= link_to 'Sign In', root_path, class: "btn btn-secondary navbar-button" %>
-    <%= link_to 'Sign Up', root_path, class: "btn btn-outline-primary navbar-button" %>
+    <% if current_owner %>
+      <%= link_to 'Sign Out', destroy_owner_session_path, method: :delete, class: "btn btn-danger navbar-button" %>
+    <% elsif current_prospect %>
+      <%= link_to 'Sign Out', destroy_prospect_session_path, method: :delete, class: "btn btn-danger navbar-button" %>
+    <% else %>
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle btn btn-secondary navbar-button" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sign In As ...
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to 'Owner', owner_session_path, class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to 'Prospect', prospect_session_path, class: "dropdown-item" %>
+        </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle btn btn-outline-primary navbar-button" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sign Up As ...
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to 'Owner', new_owner_registration_path, class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to 'Prospect', new_prospect_registration_path, class: "dropdown-item" %>
+        </div>
+      </div>
+    <% end %>
     <%
 =begin%>
  <form class="form-inline my-2 my-lg-0">

@@ -11,8 +11,24 @@
 
   <body>
     <%= render 'shared/main_navbar' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if flash[:notice] %>
+      <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <div class="text-center">
+           <%= notice %>
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <%= alert %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>
     <%= yield %>
 
   </body>

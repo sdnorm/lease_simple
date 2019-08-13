@@ -57,3 +57,5 @@ gem 'devise'
 # gem "omniauth-rails_csrf_protection"
 
 gem 'awesome_print', require: 'ap'
+
+gem 'devise-bootstrap-views', '~> 1.0'

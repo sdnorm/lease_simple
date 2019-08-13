@@ -17,3 +17,16 @@
 #   {name: "Second Prop", address_1: "18530 Red Oak Dr.", city: "Prairieville", state: "LA", zip_code: "70769", owner_id: Owner.second.id, latitude: "30.3348786", longitude: "-90.9914966"},
 #   {name: "Third Prop", address_1: "18531 Red Oak Dr.", city: "Prairieville", state: "LA", zip_code: "70769", owner_id: Owner.third.id, latitude: "30.3346126", longitude: "-90.9919843"}
 # ])
+
+Prospect.create!([
+  {
+    name: "Bob Prospect",
+    email: "bob@prospect.com",
+    password: "passwo"
+  },
+  {
+    name: "Jill Prospect",
+    email: "jill@prospect.com",
+    password: "passwo"
+  }
+])

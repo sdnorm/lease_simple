@@ -4,6 +4,6 @@ class Prospect < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :confirmable, :trackable, :lockable#, :omniauthable
+        :trackable, :lockable#, :confirmable, :omniauthable
 
 end
