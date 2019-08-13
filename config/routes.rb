@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   devise_for :prospects, path: 'users', controllers: {
     sessions: "prospects/sessions",
     confirmations: "prospects/sessions",
-    omniauth_callbacks: "prospects/omniauth_callbacks",
+    # omniauth_callbacks: "prospects/omniauth_callbacks",
     passwords: "prospects/passwords",
     registrations: "prospects/registrations",
     unlocks: "prospects/unlocks"
