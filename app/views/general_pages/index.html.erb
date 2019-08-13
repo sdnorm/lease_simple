@@ -1,1 +1,9 @@
 <h1>Home/Index Page</h1>
+
+<ul>
+  <% @properties.each do |p| %>
+    <li>
+      <%= p.city %> - <%= p.state %>
+    </li>
+  <% end %>
+</ul>
