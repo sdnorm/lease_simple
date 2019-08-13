@@ -54,6 +54,6 @@ gem 'jquery-rails'
 gem 'devise'
 # gem 'omniauth'
 
-gem "omniauth-rails_csrf_protection"
+# gem "omniauth-rails_csrf_protection"
 
 gem 'awesome_print', require: 'ap'
